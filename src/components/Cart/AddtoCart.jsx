@@ -3,8 +3,7 @@ import axios from 'axios';
 
 const AddtoCart = () => {
   const [cart, setCart] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+
 
   useEffect(() => {
     const fetchCart = async () => {
@@ -55,13 +54,6 @@ const AddtoCart = () => {
     }
   };
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>{error}</div>;
-  }
 
   return (
     <section className="h-screen bg-gray-100 py-12 sm:py-16 lg:py-20">
